@@ -1,4 +1,4 @@
-# design-patterns-
+# design-patterns
 java设计模式：
     七大原则：
         (1) 单一职责原则
