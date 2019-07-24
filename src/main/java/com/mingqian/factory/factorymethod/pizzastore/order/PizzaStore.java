@@ -9,32 +9,29 @@ import java.io.InputStreamReader;
  */
 public class PizzaStore {
     public static void main(String[] args) {
-        while (true) {
-            String type = getType();
-            if ("bj".equals(type)) {
-                //创建北京口味的各种Pizza
-                new BJOrderPizza();
+        //创建北京口味的各种Pizza
+//        new BJOrderPizza();
+        /**
+         * 运行结果：
+         *      input pizza 种类:
+         *      cheese
+         *      北京的奶酪pizza 准备原材料
+         *      北京的奶酪pizzabaking;
+         *      北京的奶酪pizzacuting;
+         *      北京的奶酪pizzaboxing
+         */
 
-            } else if ("ld".equals(type)) {
-                //创建伦敦口味的各种Pizza
-                new LDOrderPizza();
-
-            } else {
-                System.out.println("订购披萨失败，结束！");
-                break;
-            }
-        }
-    }
-
-    private static String getType() {
-        try {
-            BufferedReader string = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("请输入想要地区的披萨种类:");
-            String str = string.readLine();
-            return str;
-        } catch (IOException e) {
-            e.printStackTrace();
-            return "";
-        }
+        //创建伦敦口味的各种Pizza
+        new LDOrderPizza();
+        /**
+         * 运行结果：
+         *  input pizza 种类:
+         *  pepper
+         *  伦敦的胡椒pizza 准备原材料
+         *  伦敦的胡椒pizzabaking;
+         *  伦敦的胡椒pizzacuting;
+         *  伦敦的胡椒pizzaboxing
+         *  input pizza 种类:
+         */
     }
 }
