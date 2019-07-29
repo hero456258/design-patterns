@@ -1,4 +1,4 @@
-package com.mingqian.adapter;
+package com.mingqian.adapter.classadapter;
 
 /**
  * Create by mingqian on 2019/7/28.
