@@ -1,0 +1,37 @@
+package com.mingqian.flyweight.jdksource;
+
+/**
+ * Created by mingqian on 2019/8/5.
+ * 享元模式在 JKD-Integer的应用源码分析
+ */
+public class FlyWeight {
+    public static void main(String[] args) {
+        //如果 Integer.valueOf(x) x 在  -128 --- 127 直接，就是使用享元模式返回,如果不在
+        //范围类，则仍然 new
+
+        //小结:
+        /**
+         * 总结：
+         *      1. 在valueOf 方法中，先判断值是否在 IntegerCache 中，如果不在，就创建新的Integer(new), 否则，就直接从 缓存池返回
+         *      2. valueOf 方法，就使用到享元模式
+         *      3.如果使用valueOf 方法得到一个Integer 实例，范围在 -128 - 127 ，执行速度比 new 快
+         *      4.超过-128--127比较是否相等用equals
+         */
+        Integer x = Integer.valueOf(127);//得到x实例，类型Integer
+        Integer y = new Integer(127);//得到x实例，类型Integer
+        Integer z = Integer.valueOf(127);
+        Integer w = new Integer(127);
+
+        System.out.println(x.equals(y)); // 大小，true
+        System.out.println(x == y); //  false
+        System.out.println(x == z); // true
+        System.out.println(w == x); // false
+        System.out.println(w == y); // false
+
+
+        Integer x1 = Integer.valueOf(200);
+        Integer x2 = Integer.valueOf(200);
+        System.out.println("x1==x2" + (x1 == x2)); // false
+
+    }
+}
