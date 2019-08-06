@@ -356,3 +356,15 @@ java设计模式:
                                         1) 优点：在不修改目标对象的功能前提下，能通过代理对象对目标功能扩展
                                         2) 缺点：因为代理对象需要与目标对象实现一样的接口，所以会有很多代理类
                                         3) 一旦接口增加方法，目标对象与代理对象都要维护    
+                                        
+                JDK动态代理:
+                    动态代理模式的基本介绍    
+                                1) 代理对象，不需要实现接口，但是目标对象要实现接口，否则不能用动态代理
+                                2) 代理对象的生成，是利用JDK的API，动态的在内存中构建代理对象
+                                3) 动态代理也叫作：JKD代理、接口代理
+                
+                    JDK中生成代理对象的API
+                                1) 代理类所在包：java.lang.reflect.Proxy
+                                2) JDK实现代理只需要使用 newProxyInstance 方法，但是该方法需要接收三个参数，
+                                   完整的写法是：
+                                    public static Object newProxyInstance(ClassLoader loader,Class<?>[] interfaces,InvocationHandler h)
