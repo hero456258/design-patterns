@@ -1,9 +1,10 @@
 package com.mingqian.adapter.objectadapter;
 
+
 /**
- * Create by mingqian on 2019/7/28.
- * 适配器类
- */
+* Create by mingqian on 2019/7/28.
+* 适配器类
+*/
 public class VoltageAdapter implements IVoltage5V {
 
     /**
@@ -33,6 +34,7 @@ public class VoltageAdapter implements IVoltage5V {
             System.out.println("适配完成，输出的电压为= " + dstV);
 
         }
+
 
         return dstV;
     }

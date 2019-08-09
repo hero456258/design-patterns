@@ -1,9 +1,10 @@
 package com.mingqian.adapter.objectadapter;
 
+
 /**
- * Create by mingqian on 2019/7/28.
- * 手机
- */
+* Create by mingqian on 2019/7/28.
+* 手机
+*/
 public class Phone {
 
     /**
